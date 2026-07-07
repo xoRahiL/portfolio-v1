@@ -1,8 +1,14 @@
-/* body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #000;
+  color: #f4f4f4;
 }
 
 main {
@@ -11,11 +17,91 @@ main {
   padding: 2rem 1rem;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: #f4f4f4c7;
+  text-decoration: none;
+}
+
 #contact a {
   color: #2563eb;
-  text-decoration: none;
 }
 
 #contact a:hover {
   text-decoration: underline;
-} */
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section h2,
+section h3 {
+  margin: 1rem 0;
+}
+
+section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+
+/* CSS Layout should be this below*/
+
+/* ===========================
+   RESET
+=========================== */
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+/* ===========================
+   HERO
+=========================== */
+
+/* ===========================
+   ABOUT
+=========================== */
+
+/* ===========================
+   SKILLS
+=========================== */
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+/* ===========================
+   CONTACT
+=========================== */
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  color: #a3a3a3;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+/* ===========================
+   UTILITIES
+=========================== */
