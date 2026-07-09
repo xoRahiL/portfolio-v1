@@ -297,3 +297,45 @@ footer {
 /* Tablet */
 
 /* Mobile */
+@media (max-width: 768px) {
+  #hero {
+    min-height: auto;
+    padding: 6rem 1rem;
+  }
+
+  #hero-name {
+    font-size: clamp(7rem, 28vw, 10rem);
+  }
+
+  .hero-build-with {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    width: clamp(180px, 45vw, 260px);
+    top: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-button {
+    width: 220px;
+    text-align: center;
+  }
+}
