@@ -1,20 +1,53 @@
+/* ==================================================
+   1. RESET
+================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #000;
-  color: #f4f4f4;
+/* ==================================================
+   2. ROOT VARIABLES
+================================================== */
+
+:root {
+  /* Colors */
+  --background-color: #000;
+  --text-color: #f4f4f4;
+  --text-secondary: #a3a3a3;
+
+  /* Different Website uses Different link color accent which are as follows:  */
+  /* Google: #4285F4;, Spotify: #4285F4;, Apple: #0071E3; */
+  --link-color: #2563eb;
+  --link-hover-color: #1d4ed8;
+
+  /* Typography */
+  --font-primary: "Inter", sans-serif;
+
+  /* Layout */
+  --container-width: 800px;
+  --section-spacing: 2rem;
+
+  /* Effects */
+  --transition: all 0.3s ease;
 }
 
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+/* ==================================================
+   3. GLOBAL STYLES
+================================================== */
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 ol,
@@ -22,86 +55,132 @@ ul {
   list-style: none;
 }
 
-a {
-  color: #f4f4f4c7;
-  text-decoration: none;
-}
-
-#contact a {
-  color: #2563eb;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-section {
-  margin: 2rem 0;
-}
+/* ==================================================
+   4. TYPOGRAPHY
+================================================== */
 
 section h2,
 section h3 {
   margin: 1rem 0;
 }
 
+/* ==================================================
+   5. LAYOUT
+================================================== */
+
+main {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin: var(--section-spacing) 0;
+}
+
+/* ==================================================
+   6. HEADER
+================================================== */
+
+/* Nothing yet */
+
+/* ==================================================
+   7. NAVIGATION
+================================================== */
+
+/* Nothing yet */
+
+/* ==================================================
+   8. MAIN CONTENT
+================================================== */
+
+/* Nothing yet */
+
+/* ==================================================
+   9. COMPONENTS
+================================================== */
+
+/* Nothing yet */
+
+/* ==================================================
+   10. PAGE SECTIONS
+================================================== */
+
+/* ---------- Hero ---------- */
+
+#hero h1,
+#hero h3 {
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#hero h3 {
+  font-size: 1.5rem;
+}
+
+/* ---------- About ---------- */
+
+/* Nothing yet */
+
+/* ---------- Skills ---------- */
+
 section ul {
   list-style: disc;
   margin-left: 1.5rem;
 }
 
+/* ---------- Education ---------- */
 
-/* CSS Layout should be this below*/
+/* Nothing yet */
 
-/* ===========================
-   RESET
-=========================== */
+/* ---------- Projects ---------- */
 
-/* ===========================
-   GLOBAL
-=========================== */
+/* Nothing yet */
 
-/* ===========================
-   TYPOGRAPHY
-=========================== */
+/* ---------- Contact ---------- */
 
-/* ===========================
-   LAYOUT
-=========================== */
+#contact a {
+  color: var(--link-color);
+  transition: var(--transition);
+}
 
-/* ===========================
-   HERO
-=========================== */
+#contact a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
 
-/* ===========================
-   ABOUT
-=========================== */
-
-/* ===========================
-   SKILLS
-=========================== */
-
-/* ===========================
-   PROJECTS
-=========================== */
-
-/* ===========================
-   CONTACT
-=========================== */
-
-/* ===========================
-   FOOTER
-=========================== */
+/* ==================================================
+   11. FOOTER
+================================================== */
 
 footer {
   text-align: center;
   padding: 1.5rem 1rem 2rem;
-  color: #a3a3a3;
+  color: var(--text-secondary);
 }
 
-/* ===========================
-   BUTTONS
-=========================== */
+/* ==================================================
+   12. ANIMATIONS
+================================================== */
 
-/* ===========================
-   UTILITIES
-=========================== */
+/* Nothing yet */
+
+/* ==================================================
+   13. UTILITIES
+================================================== */
+
+/* Nothing yet */
+
+/* ==================================================
+   14. MEDIA QUERIES
+================================================== */
+
+/* Desktop */
+
+/* Tablet */
+
+/* Mobile */
