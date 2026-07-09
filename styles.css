@@ -59,10 +59,10 @@ ul {
    4. TYPOGRAPHY
 ================================================== */
 
-section h2,
+/* section h2,
 section h3 {
   margin: 1rem 0;
-}
+} */
 
 /* ==================================================
    5. LAYOUT
@@ -71,7 +71,7 @@ section h3 {
 main {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 2rem 1rem;
+  /* padding: 1rem 1rem; */
 }
 
 section {
@@ -112,127 +112,133 @@ section {
 
 #hero {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   position: relative;
-
-  padding-bottom: 4rem;
+  padding: 2rem;
+  overflow: hidden;
 }
-
-/* ---------- Title ---------- */
-
 .hero-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.hero-build-with {
-  margin-bottom: -1rem;
-  font-size: 1.3rem;
-}
-
-#hero-name {
-  font-family: "Teko", sans-serif;
-  font-size: clamp(12rem, 28vw, 22rem);
-  font-weight: 900;
-
-  text-transform: uppercase;
-
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-
-  color: rgba(255, 255, 255, 0.03);
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.08);
-
-  position: relative;
   z-index: 1;
 }
-
-/* ---------- Portrait ---------- */
-
+.hero-build-with {
+  font-size: 1.2rem;
+  /* margin-bottom: 0.5rem; */
+  transform: rotate(-5deg);
+}
+#hero-name {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(8rem, 24vw, 18rem);
+  line-height: 0.85;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.04);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.45);
+}
+#hero-name span {
+  display: inline-block;
+  animation: glyph 4s infinite;
+}
+#hero-name span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#hero-name span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+#hero-name span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+#hero-name span:nth-child(5) {
+  animation-delay: 0.8s;
+}
 .hero-image {
-  width: clamp(220px, 28vw, 350px);
-
+  width: clamp(220px, 28vw, 330px);
   position: absolute;
-  top: 2rem;
-  left: 47%;
+  top: 3rem;
+  left: 45%;
   transform: translateX(-50%);
-
   z-index: 2;
 }
-
-/* ---------- Content ---------- */
-
 .hero-content {
-  margin-top: 10rem;
-
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 1.5rem;
+  max-width: 650px;
+  text-align: center;
+  z-index: 3;
 }
-
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
-
-  max-width: 700px;
-  text-align: center;
-
-  text-align: center;
 }
-
 .hero-description {
-  max-width: 650px;
-
-  text-align: center;
-
   line-height: 1.8;
 }
-
-/* ---------- Buttons ---------- */
-
 .hero-btns {
   display: flex;
-
-  justify-content: center;
-
   gap: 1rem;
-
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .hero-button {
   padding: 0.9rem 1.8rem;
-
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-
-  color: white;
-
-  cursor: pointer;
-
   transition: 0.3s;
 }
-
-.hero-button:first-child {
-  background: white;
-  color: black;
+.hero-button.primary {
+  background: #fff;
+  color: #000;
 }
-
 .hero-button:hover {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
+}
+@keyframes glyph {
+  0%,
+  100% {
+    opacity: 0.7;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.9),
+      0 0 24px rgba(255, 255, 255, 0.4);
+  }
+}
+@media (max-width: 768px) {
+  .hero-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: -2rem;
+    order: 2;
+  }
+  .hero-content {
+    margin-top: 2rem;
+  }
+  #hero-name {
+    font-size: clamp(6rem, 22vw, 9rem);
+  }
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-button {
+    width: 220px;
+    text-align: center;
+  }
 }
 
 /* ---------- About ---------- */
@@ -280,7 +286,28 @@ footer {
    12. ANIMATIONS
 ================================================== */
 
-/* Nothing yet */
+@keyframes breathe {
+  0%,
+  100% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.08),
+      0 0 20px rgba(255, 255, 255, 0.04);
+  }
+  50% {
+    text-shadow:
+      0 0 12px rgba(255, 255, 255, 0.25),
+      0 0 35px rgba(255, 255, 255, 0.12);
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -120%;
+  }
+  100% {
+    left: 150%;
+  }
+}
 
 /* ==================================================
    13. UTILITIES
