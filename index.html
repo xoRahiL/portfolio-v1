@@ -12,6 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- additional fonts cdns -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,14 +29,34 @@
     </header>
     <main>
       <section id="hero">
-        <h1>Rahil Khan</h1>
-        <h3>Python Developer | Aspiring MERN Stack Developer</h3>
-        <p>
-          I’m a BCA graduate with a foundation in Python and Django, currently
-          learning the MERN stack. I enjoy understanding how web applications
-          work, building projects from scratch, and improving my skills through
-          consistent hands-on practice.
-        </p>
+        <div class="hero-title">
+          <p class="hero-build-with">Build with</p>
+          <h1 id="hero-name">RAHIL</h1>
+        </div>
+
+        <img
+          class="hero-image"
+          src="portrait.png"
+          alt="Portrait of Rahil Khan"
+        />
+
+        <div class="hero-content">
+          <h2 class="hero-subtitle">
+            Python Developer | Aspiring MERN Stack Developer
+          </h2>
+
+          <p class="hero-description">
+            I’m a BCA grad with a foundation in Python and Django, currently
+            learning the MERN stack. I enjoy understanding how web applications
+            work, building projects from scratch, and improving my skills
+            through consistent hands-on practice.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#projects" class="hero-button">View Projects</a>
+            <a href="#contact" class="hero-button">Contact Me</a>
+          </div>
+        </div>
       </section>
 
       <section id="about">

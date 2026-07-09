@@ -27,7 +27,7 @@
   --font-primary: "Inter", sans-serif;
 
   /* Layout */
-  --container-width: 800px;
+  --container-width: 900px;
   --section-spacing: 2rem;
 
   /* Effects */
@@ -108,18 +108,131 @@ section {
 
 /* ---------- Hero ---------- */
 
-#hero h1,
-#hero h3 {
+/* ---------- Hero ---------- */
+
+#hero {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  padding-bottom: 4rem;
+}
+
+/* ---------- Title ---------- */
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-build-with {
+  margin-bottom: -1rem;
+  font-size: 1.3rem;
+}
+
+#hero-name {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(12rem, 28vw, 22rem);
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+
+  color: rgba(255, 255, 255, 0.03);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.15),
+    0 0 20px rgba(255, 255, 255, 0.08);
+
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Portrait ---------- */
+
+.hero-image {
+  width: clamp(220px, 28vw, 350px);
+
+  position: absolute;
+  top: 2rem;
+  left: 47%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+}
+
+/* ---------- Content ---------- */
+
+.hero-content {
+  margin-top: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  max-width: 700px;
+  text-align: center;
+
   text-align: center;
 }
 
-#hero h1 {
-  font-size: 3rem;
-  font-weight: 900;
+.hero-description {
+  max-width: 650px;
+
+  text-align: center;
+
+  line-height: 1.8;
 }
 
-#hero h3 {
-  font-size: 1.5rem;
+/* ---------- Buttons ---------- */
+
+.hero-btns {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.hero-button {
+  padding: 0.9rem 1.8rem;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.hero-button:first-child {
+  background: white;
+  color: black;
+}
+
+.hero-button:hover {
+  background: white;
+  color: black;
 }
 
 /* ---------- About ---------- */
