@@ -272,7 +272,135 @@ section {
 
 /* ---------- About ---------- */
 
-/* Nothing yet */
+/* ---------- About ---------- */
+
+/* ---------- About ---------- */
+
+#about {
+  margin: 10rem 0;
+}
+
+/* ===== Story ===== */
+
+.about-story {
+  max-width: 720px;
+  margin-bottom: 6rem;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.about-story.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.section-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.about-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.about-description {
+  max-width: 650px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+/* ===== Timeline ===== */
+
+.about-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ===== Every Step ===== */
+
+.timeline-item {
+  width: 260px;
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item h3{
+    font-size:1.35rem;
+    font-weight:600;
+    letter-spacing:-.02em;
+    margin-bottom:.4rem;
+}
+
+.timeline-item span{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.12rem;
+    text-transform:uppercase;
+    color:#777;
+    margin-bottom:.8rem;
+}
+
+.timeline-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ===== Stair Positions ===== */
+
+.left {
+  margin-left: 0;
+}
+
+.center {
+  margin-left: 220px;
+}
+
+.right {
+  margin-left: 440px;
+}
+
+.far-right {
+  margin-left: 660px;
+}
+
+.timeline-item::after {
+  content: "";
+
+  display: block;
+
+  width: 150px;
+  height: 1px;
+
+  margin-top: 1.2rem;
+
+  background: rgba(255,255,255,.18);
+}
+
+/* .timeline-item:last-child::after{
+    display:none;
+} */
 
 /* ---------- Skills ---------- */
 

@@ -58,7 +58,7 @@
         </div>
       </section>
 
-      <section id="about">
+      <!-- <section id="about">
         <h2>About Me</h2>
         <h3>My Journey</h3>
         <p>
@@ -88,6 +88,80 @@
           developer, make better decisions, and continuously improve both
           professionally and personally.
         </p>
+      </section> -->
+
+      <section id="about">
+        <div class="about-story">
+          <p class="section-label">THE JOURNEY</p>
+
+          <h2 class="about-heading">
+            Every project starts with an idea.<br />
+            Mine started with curiosity.
+          </h2>
+
+          <p class="about-description">
+            Everything changed when I got my first laptop in Class 8. What began
+            as exploring Android customization, operating systems, and
+            networking slowly evolved into a passion for building software. That
+            curiosity eventually led me to web development, where I discovered
+            that creating things was far more exciting than simply using them.
+          </p>
+        </div>
+
+        <div class="about-timeline">
+          <div class="timeline-item left">
+            <h3>First Laptop</h3>
+            <span>Class 8</span>
+            <p>
+              Discovered there was far more to technology than simply using it.
+            </p>
+          </div>
+
+          <div class="timeline-item center">
+            <h3>Curiosity</h3>
+            <p>
+              Began exploring operating systems, Android customization and
+              networking.
+            </p>
+          </div>
+
+          <div class="timeline-item right">
+            <h3>First Website</h3>
+            <span>Class 11</span>
+            <p>Built my first websites and fell in love with creating.</p>
+          </div>
+
+          <div class="timeline-item far-right">
+            <h3>Pandemic</h3>
+            <p>A change in pace, not in purpose.</p>
+          </div>
+
+          <div class="timeline-item right">
+            <h3>Road Accident</h3>
+            <p>A difficult chapter that strengthened resilience.</p>
+          </div>
+
+          <div class="timeline-item center">
+            <h3>Python & Django</h3>
+            <span>Internship</span>
+            <p>Turned curiosity into practical development experience.</p>
+          </div>
+
+          <div class="timeline-item left">
+            <h3>Teaching</h3>
+            <p>Helping others learn made me a better developer.</p>
+          </div>
+
+          <div class="timeline-item center">
+            <h3>Northeast PSC</h3>
+            <p>Built automation tools while continuing to grow.</p>
+          </div>
+
+          <div class="timeline-item right">
+            <h3>Today</h3>
+            <p>Building products with stronger foundations than ever.</p>
+          </div>
+        </div>
       </section>
 
       <section id="skills">
@@ -157,5 +231,25 @@
     <footer>
       <p>&copy; 2026 Rahil Khan</p>
     </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        },
+      );
+
+      document.querySelectorAll(".about-story, .timeline-item")
+        .forEach((item) => {
+          observer.observe(item);
+        });
+    </script>
   </body>
 </html>
