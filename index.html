@@ -110,56 +110,83 @@
 
         <div class="about-timeline">
           <div class="timeline-item left">
-            <h3>First Laptop</h3>
+            <h3>The Beginning</h3>
             <span>Class 8</span>
             <p>
-              Discovered there was far more to technology than simply using it.
+              It started with one laptop, endless curiosity, and countless hours
+              of exploration.
             </p>
           </div>
 
           <div class="timeline-item center">
             <h3>Curiosity</h3>
             <p>
-              Began exploring operating systems, Android customization and
-              networking.
+              The more I explored, the more I wanted to understand what was
+              happening behind the screen.
             </p>
           </div>
 
           <div class="timeline-item right">
             <h3>First Website</h3>
             <span>Class 11</span>
-            <p>Built my first websites and fell in love with creating.</p>
+            <p>
+              Building my first websites made me realize creating was far more
+              rewarding than simply consuming.
+            </p>
           </div>
 
           <div class="timeline-item far-right">
-            <h3>Pandemic</h3>
-            <p>A change in pace, not in purpose.</p>
+            <h3>Choosing the Path</h3>
+            <p>
+              While plans changed around me, my focus remained on becoming a
+              developer.
+            </p>
           </div>
 
           <div class="timeline-item right">
-            <h3>Road Accident</h3>
-            <p>A difficult chapter that strengthened resilience.</p>
+            <h3>Resilience</h3>
+            <p>
+              Right after the pandemic, A major road accident tested my
+              determination, but never my passion for technology.
+            </p>
           </div>
 
           <div class="timeline-item center">
-            <h3>Python & Django</h3>
-            <span>Internship</span>
-            <p>Turned curiosity into practical development experience.</p>
+            <h3>Real-World Development</h3>
+            <span>SparkstoIdeas Internship</span>
+            <p>
+              Turning classroom knowledge into practical software development.
+            </p>
           </div>
 
           <div class="timeline-item left">
-            <h3>Teaching</h3>
-            <p>Helping others learn made me a better developer.</p>
+            <h3>Learning by Teaching</h3>
+            <p>
+              Teaching others strengthened my own understanding and reminded me
+              that learning never stops.
+            </p>
           </div>
 
           <div class="timeline-item center">
-            <h3>Northeast PSC</h3>
+            <h3>Growing Through Experience</h3>
+            <span>Northeast PSC</span>
             <p>Built automation tools while continuing to grow.</p>
           </div>
 
           <div class="timeline-item right">
-            <h3>Today</h3>
-            <p>Building products with stronger foundations than ever.</p>
+            <h3>Sharpening the Craft</h3>
+            <p>
+              Every experience added a new perspective, strengthening both my
+              technical skills and the way I approach problems.
+            </p>
+          </div>
+
+          <div class="timeline-item far-right">
+            <h3>Present</h3>
+            <p>
+              Today, I'm investing the time and effort needed to become the
+              developer I've always aspired to be.
+            </p>
           </div>
         </div>
       </section>
@@ -245,8 +272,56 @@
           threshold: 0.2,
         },
       );
+      const heroTitle = document.querySelector(".hero-title");
+      const heroImage = document.querySelector(".hero-image");
+      const heroContent = document.querySelector(".hero-content");
 
-      document.querySelectorAll(".about-story, .timeline-item")
+      const revealHero = () => {
+        heroTitle.classList.add("show");
+        heroImage.classList.add("show");
+        heroContent.classList.add("show");
+      };
+
+      const easeInOutQuad = (t) =>
+        t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+      const smoothScroll = (target, duration = 900) => {
+        const targetEl = document.querySelector(target);
+        if (!targetEl) return;
+
+        const start = window.scrollY;
+        const end = targetEl.getBoundingClientRect().top + start;
+        const startTime = performance.now();
+
+        const scrollStep = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeInOutQuad(progress);
+          window.scrollTo(0, start + (end - start) * eased);
+
+          if (progress < 1) {
+            requestAnimationFrame(scrollStep);
+          }
+        };
+
+        requestAnimationFrame(scrollStep);
+      };
+
+      window.addEventListener("load", () => {
+        requestAnimationFrame(revealHero);
+      });
+
+      document
+        .querySelectorAll(".hero-btns a[href^='#']")
+        .forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            smoothScroll(link.getAttribute("href"));
+          });
+        });
+
+      document
+        .querySelectorAll(".about-story, .timeline-item")
         .forEach((item) => {
           observer.observe(item);
         });
