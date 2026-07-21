@@ -46,10 +46,9 @@
             Python Developer | Aspiring MERN Stack Developer
           </h2>
           <p class="hero-description">
-            I'm a BCA graduate with a foundation in Python and Django, currently
-            learning the MERN stack. I enjoy understanding how web applications
-            work, building projects from scratch and improving my skills through
-            consistent hands-on practice.
+            Technology will continue to evolve, and so will the tools I use.
+            What remains constant is my curiosity to learn, adapt, and
+            continuously grow as a developer.
           </p>
           <div class="hero-btns">
             <a href="#projects" class="hero-button primary">View Projects</a>
@@ -277,13 +276,12 @@
       const heroContent = document.querySelector(".hero-content");
 
       const revealHero = () => {
-        heroTitle.classList.add("show");
-        heroImage.classList.add("show");
-        heroContent.classList.add("show");
+        heroTitle?.classList.add("show");
+        heroImage?.classList.add("show");
+        heroContent?.classList.add("show");
       };
 
-      const easeInOutQuad = (t) =>
-        t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
 
       const smoothScroll = (target, duration = 900) => {
         const targetEl = document.querySelector(target);
@@ -311,14 +309,12 @@
         requestAnimationFrame(revealHero);
       });
 
-      document
-        .querySelectorAll(".hero-btns a[href^='#']")
-        .forEach((link) => {
-          link.addEventListener("click", (event) => {
-            event.preventDefault();
-            smoothScroll(link.getAttribute("href"));
-          });
+      document.querySelectorAll(".hero-btns a[href^='#']").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          smoothScroll(link.getAttribute("href"));
         });
+      });
 
       document
         .querySelectorAll(".about-story, .timeline-item")
