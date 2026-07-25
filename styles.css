@@ -47,7 +47,8 @@ html {
 body {
   font-family: var(--font-primary);
   line-height: 1.6;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 30%),
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 30%),
     var(--background-color);
   color: var(--text-color);
 }
@@ -416,9 +417,141 @@ section {
 
 /* ---------- Skills ---------- */
 
-section ul {
+/* section ul {
   list-style: disc;
   margin-left: 1.5rem;
+} */
+
+#skills {
+  padding: 5rem 0%;
+}
+
+.skills-intro {
+  max-width: 750px;
+  margin-bottom: 7rem;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skills-intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  padding: 0 10%;
+}
+
+#skills .stack-item {
+  max-width:420px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#skills .stack-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#skills .stack-item.left {
+  margin-left: 0;
+}
+
+#skills .stack-item.right {
+  margin-left: auto;
+}
+
+#skills .stack-item h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.8rem;
+}
+
+#skills .stack-item span {
+  display: block;
+  max-width: 38rem;
+  white-space: normal;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ---------- Tech Stair ---------- */
+
+#skills .tech-item-stair {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1.2rem;
+}
+
+#skills .tech-item {
+  width: fit-content;
+
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-color);
+
+  position: relative;
+  padding-bottom: 0.55rem;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+#skills .tech-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#skills .tech-item:nth-child(1) {
+  margin-left: 0;
+}
+#skills .tech-item:nth-child(2) {
+  margin-left: 2.5rem;
+}
+#skills .tech-item:nth-child(3) {
+  margin-left: 5rem;
+}
+#skills .tech-item:nth-child(4) {
+  margin-left: 7.5rem;
+}
+#skills .tech-item::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 50px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease;
+}
+#skills .tech-item:hover::after{
+    width:90px;
+    background:rgba(255,255,255,.45);
 }
 
 /* ---------- Education ---------- */
