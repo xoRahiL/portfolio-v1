@@ -308,7 +308,7 @@ section {
 /* ---------- About ---------- */
 
 #about {
-  margin: 1rem 0;
+  margin: 5rem 0;
 }
 
 /* ===== Story ===== */
@@ -335,7 +335,7 @@ section {
   margin-bottom: 1rem;
 }
 .about-heading {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   line-height: 1.15;
   margin-bottom: 1.5rem;
 }
@@ -452,7 +452,7 @@ section {
 }
 
 #skills .stack-item {
-  max-width:420px;
+  max-width: 350px;
   opacity: 0;
   transform: translateY(40px);
   transition:
@@ -549,29 +549,456 @@ section {
     width 0.35s ease,
     background 0.35s ease;
 }
-#skills .tech-item:hover::after{
-    width:90px;
-    background:rgba(255,255,255,.45);
+#skills .tech-item:hover::after {
+  width: 90px;
+  background: rgba(255, 255, 255, 0.45);
 }
 
 /* ---------- Education ---------- */
 
-/* Nothing yet */
+/*==========================
+    EDUCATION SECTION
+==========================*/
+
+#education {
+  width: min(90%, 800px);
+  margin: 10rem 0;
+}
+
+.education-intro {
+  margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.education-intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-intro .section-label {
+  margin-bottom: 1rem;
+}
+
+.education-heading {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  max-width: 700px;
+}
+
+.education-card {
+  border-left: 2px solid var(--text-color);
+  padding-left: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.education-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.education-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-content h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.education-college {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.education-meta {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
 
 /* ---------- Projects ---------- */
 
-/* Nothing yet */
+/*========================================
+                PROJECTS
+========================================*/
+
+#projects {
+  width: min(100%, 900px);
+  margin: 16rem auto 8rem auto;
+}
+
+.projects-intro {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 5rem;
+}
+
+.projects-intro .about-heading {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*========================================
+                PROJECT
+========================================*/
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 6rem 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/*========================================
+            ZIG-ZAG LAYOUT
+========================================*/
+
+.project:nth-child(even) .project-preview {
+  order: 2;
+}
+
+.project:nth-child(even) .project-content {
+  order: 1;
+}
+
+/*========================================
+            PROJECT PREVIEW
+========================================*/
+
+.project-preview {
+  overflow: hidden;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.35s ease;
+}
+
+.project-preview img {
+  width: 100%;
+  display: block;
+
+  transition: 0.45s ease;
+}
+
+.project:hover .project-preview {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.project:hover .project-preview img {
+  transform: scale(1.04);
+}
+
+/*========================================
+            PROJECT CONTENT
+========================================*/
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.project-number {
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--text-secondary);
+}
+
+.project-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.project-tagline {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.project-description {
+  max-width: 55ch;
+
+  line-height: 1.8;
+
+  color: var(--text-secondary);
+}
+
+/*========================================
+            TECH STACK
+========================================*/
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  margin-top: 0.5rem;
+
+  list-style: none;
+}
+
+.project-tech li {
+  padding: 0.45rem 1rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+}
+
+/*========================================
+                LINKS
+========================================*/
+
+.project-links {
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+.project-links a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: var(--text-color);
+
+  transition: 0.25s;
+}
+
+.project-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: currentColor;
+
+  transition: width 0.25s ease;
+}
+
+.project-links a:hover::after {
+  width: 100%;
+}
+
+/*========================================
+            RESPONSIVE
+========================================*/
+
+@media (max-width: 900px) {
+  .project {
+    grid-template-columns: 1fr;
+
+    gap: 2.5rem;
+
+    padding: 4rem 0;
+  }
+
+  .project:nth-child(even) .project-preview,
+  .project:nth-child(even) .project-content {
+    order: initial;
+  }
+
+  .project-content {
+    gap: 1.2rem;
+  }
+
+  .project-description {
+    max-width: 100%;
+  }
+}
 
 /* ---------- Contact ---------- */
 
-#contact a {
-  color: var(--link-color);
-  transition: var(--transition);
+/*========================================
+                CONTACT
+========================================*/
+
+#contact {
+  width: min(1100px, 90%);
+  margin: 10rem auto;
 }
 
-#contact a:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
+.contact-intro {
+  max-width: 700px;
+  margin-bottom: 5rem;
+}
+
+.contact-text {
+  margin-top: 1.5rem;
+
+  max-width: 60ch;
+
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+}
+
+/*========================================
+            CONTACT CONTENT
+========================================*/
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 6rem;
+
+  padding-top: 4rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/*========================================
+            CONTACT INFO
+========================================*/
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: var(--text-secondary);
+}
+
+.contact-item a,
+.contact-item p {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+  color: var(--text-color);
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.contact-item a:hover {
+  color: var(--link-color);
+}
+
+/*========================================
+            SOCIAL LINKS
+========================================*/
+
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  align-self: start;
+}
+
+.contact-socials a {
+  position: relative;
+
+  width: fit-content;
+
+  text-decoration: none;
+
+  color: var(--text-color);
+
+  transition: 0.25s ease;
+}
+
+.contact-socials a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background: currentColor;
+
+  transition: width 0.25s ease;
+}
+
+.contact-socials a:hover::after {
+  width: 100%;
+}
+
+.contact-socials a:hover {
+  color: var(--link-color);
+}
+
+/*========================================
+            RESPONSIVE
+========================================*/
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 4rem;
+  }
+
+  .contact-item a,
+  .contact-item p {
+    font-size: 1.2rem;
+  }
+
+  .contact-socials {
+    gap: 1.2rem;
+  }
 }
 
 /* ==================================================
