@@ -652,6 +652,16 @@ section {
   width: 100%;
   max-width: 100%;
   margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-intro.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .projects-intro .about-heading {
@@ -669,9 +679,19 @@ section {
   align-items: center;
   gap: 2rem;
 
-  padding: 6rem 0;
+  padding: 4rem 0;
 
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project:last-child {
@@ -854,12 +874,31 @@ section {
 ========================================*/
 
 #contact {
-  width: min(1100px, 90%);
+  width: min(900px, 90%);
   margin: 10rem auto;
 }
 
+.contact-intro,
+.contact-content,
+.footer-content,
+.footer-meta {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-intro.show,
+.contact-content.show,
+.footer-content.show,
+.footer-meta.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .contact-intro {
-  max-width: 700px;
+  max-width: 900px;
   margin-bottom: 5rem;
 }
 
@@ -1006,9 +1045,64 @@ section {
 ================================================== */
 
 footer {
-  text-align: center;
-  padding: 1.5rem 1rem 2rem;
+  width: min(900px, 90%);
+  margin: 0 auto 3rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-secondary);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  max-width: 34ch;
+}
+
+.footer-name {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.footer-brand p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--text-color);
+}
+
+.footer-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted-silver);
 }
 
 /* ==================================================

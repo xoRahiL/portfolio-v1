@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <!-- Header section start -->
@@ -261,10 +261,10 @@
         <div class="education-card">
           <div class="education-content">
             <h3>Bachelor of Computer Applications</h3>
-            <p class="education-college">
-              Lokmanya College of Computer Applications
+            <p class="education-college">Gujarat University</p>
+            <p class="education-meta">
+              Lokmanya College of Computer Applications • 2021 — 2024
             </p>
-            <p class="education-meta">Gujarat University • 2021 — 2024</p>
           </div>
         </div>
       </section>
@@ -336,7 +336,10 @@
 
         <article class="project">
           <div class="project-preview">
-            <img src="./assets/images/netflixclone-project.jpeg" alt="Netflix Clone" />
+            <img
+              src="./assets/images/netflixclone-project.jpeg"
+              alt="Netflix Clone"
+            />
           </div>
 
           <div class="project-content">
@@ -373,7 +376,7 @@
 
         <article class="project">
           <div class="project-preview">
-            <img src="./assets/images/portfolio.webp" alt="Portfolio" />
+            <img src="./assets/images/portfolio.png" alt="Portfolio" />
           </div>
 
           <div class="project-content">
@@ -395,7 +398,9 @@
             </ul>
 
             <div class="project-links">
-              <a href="#"> Live Demo </a>
+              <a href="https://xorahil.github.io/portfolio-v1/" target="_blank">
+                Live Demo
+              </a>
 
               <a href="#"> GitHub ↗ </a>
             </div>
@@ -408,7 +413,7 @@
 
         <article class="project">
           <div class="project-preview">
-            <img src="./assets/images/landing-page.webp" alt="Landing Page" />
+            <img src="./assets/images/regna-boostrap.png" alt="Landing Page" />
           </div>
 
           <div class="project-content">
@@ -426,12 +431,24 @@
             <ul class="project-tech">
               <li>HTML</li>
               <li>CSS</li>
+              <li>Bootstrap</li>
+              <li>JavaScript</li>
             </ul>
 
             <div class="project-links">
-              <a href="#"> Live Demo </a>
+              <a
+                href="https://xorahil.github.io/RegnaBootstrap/"
+                target="_blank"
+              >
+                Live Demo
+              </a>
 
-              <a href="#"> GitHub ↗ </a>
+              <a
+                href="https://github.com/xoRahiL/RegnaBootstrap"
+                target="_blank"
+              >
+                GitHub ↗
+              </a>
             </div>
           </div>
         </article>
@@ -479,8 +496,8 @@
 
           <div class="contact-socials">
             <a href="https://github.com/xoRahiL" target="_blank"> GitHub ↗ </a>
-            <a href="#" target="_blank"> LinkedIn ↗ </a>
-            <a href="#" target="_blank"> Resume ↗ </a>
+            <a href="" target="_blank"> LinkedIn ↗ </a>
+            <a href="" target="_blank"> Resume ↗ </a>
           </div>
         </div>
       </section>
@@ -489,7 +506,23 @@
     <!-- Main content end -->
     <!-- Footer section start -->
     <footer>
-      <p>&copy; 2026 Rahil Khan</p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-name">Rahil Khan</span>
+          <p>Building thoughtful digital experiences with curiosity and code.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero">Back to top</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>© 2026 Rahil Khan</span>
+        <span>Built with HTML, CSS, and JavaScript</span>
+      </div>
     </footer>
     <!-- Footer section end -->
 
@@ -553,7 +586,7 @@
 
       document
         .querySelectorAll(
-          ".about-story, .timeline-item, .skills-intro, .stack-item, #skills .tech-item, .education-intro, .education-card, .education-content, #projects h2, #projects > ul, #contact h2, #contact > p",
+          ".about-story, .timeline-item, .skills-intro, .stack-item, #skills .tech-item, .education-intro, .education-card, .education-content, .projects-intro, .project, .contact-intro, .contact-content, .footer-content, .footer-meta, #contact h2, #contact > p",
         )
         .forEach((item) => {
           observer.observe(item);
