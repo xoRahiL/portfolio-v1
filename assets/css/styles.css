@@ -303,6 +303,37 @@ section {
     width: 220px;
     text-align: center;
   }
+
+  #about {
+    margin: 4rem 0;
+  }
+
+  .about-story {
+    margin-bottom: 3.5rem;
+  }
+
+  .about-heading {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .about-description {
+    max-width: 100%;
+  }
+
+  .about-timeline {
+    gap: 1.5rem;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.2rem 0 0;
+  }
+
+  .timeline-item::after {
+    width: 100%;
+    max-width: 220px;
+  }
 }
 
 /* ---------- About ---------- */
