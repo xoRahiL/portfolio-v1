@@ -3,34 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rahil's Portfolio</title>
+    <title>Rahil Khan | Python Developer & Aspiring MERN Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Rahil Khan — Python/Django developer from Ahmedabad, India, building toward the MERN stack. Explore projects, skills, and ways to connect."
+    />
+    <meta name="author" content="Rahil Khan" />
+    <meta name="theme-color" content="#080808" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rahil Khan | Python Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Rahil Khan — Python/Django developer building toward the MERN stack. Explore projects, skills, and ways to connect."
+    />
+    <meta property="og:image" content="assets/images/portfolio.webp" />
+    <meta property="og:url" content="https://xorahil.github.io/portfolio-v1/" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rahil Khan | Python Developer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Rahil Khan — Python/Django developer building toward the MERN stack."
+    />
+    <meta name="twitter:image" content="assets/images/portfolio.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
     <!-- Google font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- additional fonts cdns -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <!-- Header section start -->
     <header>
-      <nav></nav>
+      <nav>
+        <a href="#hero" class="nav-brand">RK</a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Header section end -->
+
     <!-- Main content start -->
-    <main>
+    <main id="main-content">
       <!-- Hero section start -->
       <section id="hero">
         <div class="hero-title">
@@ -42,8 +88,10 @@
         </div>
         <!-- <img
           class="hero-image"
-          src="portrait.png"
+          src="assets/images/portrait.webp"
           alt="Portrait of Rahil Khan"
+          width="330"
+          height="440"
         /> -->
         <div class="hero-content">
           <h2 class="hero-subtitle">
@@ -120,8 +168,8 @@
           <div class="timeline-item right">
             <h3>Resilience</h3>
             <p>
-              Right after the pandemic, A major road accident tested my
-              determination, but never my passion for tech-itemnology.
+              Right after the pandemic, a major road accident tested my
+              determination, but never my passion for technology.
             </p>
           </div>
 
@@ -152,7 +200,7 @@
             <h3>Sharpening the Craft</h3>
             <p>
               Every experience added a new perspective, strengthening both my
-              tech-itemnical skills and the way I approach problems.
+              technical skills and the way I approach problems.
             </p>
           </div>
 
@@ -271,11 +319,6 @@
       <!-- Education section end -->
 
       <!-- Projects section start -->
-
-      <!-- ==========================================
-                PROJECTS
-========================================== -->
-
       <section id="projects">
         <div class="projects-intro">
           <p class="section-label">PROJECTS</p>
@@ -286,15 +329,15 @@
           </h2>
         </div>
 
-        <!-- ==========================================
-                    PROJECT
-    ========================================== -->
-
+        <!-- PROJECT 01 -->
         <article class="project">
           <div class="project-preview">
             <img
-              src="./assets/images/event-management.png"
-              alt="Event Management System"
+              src="./assets/images/event-management.webp"
+              alt="Sparky Event Management System dashboard"
+              width="1200"
+              height="679"
+              loading="lazy"
             />
           </div>
 
@@ -323,22 +366,25 @@
             </ul>
 
             <div class="project-links">
-              <a href="https://sparkyevents.onrender.com" target="_blank"> Live Demo </a>
-
-              <a href="https://sparkyevents.onrender.com" target="_blank"> GitHub ↗ </a>
+              <a href="https://sparkyevents.onrender.com" target="_blank" rel="noopener">
+                Live Demo
+              </a>
+              <a href="https://github.com/xoRahiL/SparkyEvents" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- ==========================================
-                    PROJECT
-    ========================================== -->
-
+        <!-- PROJECT 02 -->
         <article class="project">
           <div class="project-preview">
             <img
-              src="./assets/images/netflixclone-project.jpeg"
-              alt="Netflix Clone"
+              src="./assets/images/netflixclone-project.webp"
+              alt="Netflix Clone UI screenshot"
+              width="1200"
+              height="678"
+              loading="lazy"
             />
           </div>
 
@@ -363,20 +409,24 @@
             </ul>
 
             <div class="project-links">
-              <a href="#" target="_blank"> Live Demo </a>
-
-              <a href="https://github.com/xoRahiL/netflix-clone"> GitHub ↗ </a>
+              <a href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a href="https://github.com/xoRahiL/netflix-clone" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- ==========================================
-                    PROJECT
-    ========================================== -->
-
+        <!-- PROJECT 03 -->
         <article class="project">
           <div class="project-preview">
-            <img src="./assets/images/portfolio.png" alt="Portfolio" />
+            <img
+              src="./assets/images/portfolio.webp"
+              alt="Personal Portfolio site screenshot"
+              width="1200"
+              height="702"
+              loading="lazy"
+            />
           </div>
 
           <div class="project-content">
@@ -398,22 +448,26 @@
             </ul>
 
             <div class="project-links">
-              <a href="https://xorahil.github.io/portfolio-v1/" target="_blank">
+              <a href="https://xorahil.github.io/portfolio-v1/" target="_blank" rel="noopener">
                 Live Demo
               </a>
-
-              <a href="https://github.com/xoRahiL/portfolio-v1"> GitHub ↗ </a>
+              <a href="https://github.com/xoRahiL/portfolio-v1" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- ==========================================
-                    PROJECT
-    ========================================== -->
-
+        <!-- PROJECT 04 -->
         <article class="project">
           <div class="project-preview">
-            <img src="./assets/images/regna-boostrap.png" alt="Landing Page" />
+            <img
+              src="./assets/images/regna-boostrap.webp"
+              alt="Regna landing page screenshot"
+              width="1200"
+              height="678"
+              loading="lazy"
+            />
           </div>
 
           <div class="project-content">
@@ -436,31 +490,19 @@
             </ul>
 
             <div class="project-links">
-              <a
-                href="https://xorahil.github.io/RegnaBootstrap/"
-                target="_blank"
-              >
+              <a href="https://xorahil.github.io/RegnaBootstrap/" target="_blank" rel="noopener">
                 Live Demo
               </a>
-
-              <a
-                href="https://github.com/xoRahiL/RegnaBootstrap"
-                target="_blank"
-              >
+              <a href="https://github.com/xoRahiL/RegnaBootstrap" target="_blank" rel="noopener">
                 GitHub ↗
               </a>
             </div>
           </div>
         </article>
       </section>
-
       <!-- Projects section end -->
 
       <!-- Contact section start -->
-      <!-- ==========================================
-                CONTACT
-========================================== -->
-
       <section id="contact">
         <div class="contact-intro">
           <p class="section-label">CONTACT</p>
@@ -495,15 +537,18 @@
           </div>
 
           <div class="contact-socials">
-            <a href="https://github.com/xoRahiL" target="_blank"> GitHub ↗ </a>
-            <a href="" target="_blank"> LinkedIn ↗ </a>
-            <a href="" target="_blank"> Resume ↗ </a>
+            <a href="https://github.com/xoRahiL" target="_blank" rel="noopener">GitHub ↗</a>
+            <!-- TODO: replace with your real LinkedIn URL -->
+            <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <!-- TODO: replace with a link to your resume PDF -->
+            <a href="#" target="_blank" rel="noopener">Resume ↗</a>
           </div>
         </div>
       </section>
       <!-- Contact section end -->
     </main>
     <!-- Main content end -->
+
     <!-- Footer section start -->
     <footer>
       <div class="footer-content">
@@ -526,71 +571,6 @@
     </footer>
     <!-- Footer section end -->
 
-    <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-            }
-          });
-        },
-        {
-          threshold: 0.2,
-        },
-      );
-      const heroTitle = document.querySelector(".hero-title");
-      const heroImage = document.querySelector(".hero-image");
-      const heroContent = document.querySelector(".hero-content");
-
-      const revealHero = () => {
-        heroTitle?.classList.add("show");
-        heroImage?.classList.add("show");
-        heroContent?.classList.add("show");
-      };
-
-      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-
-      const smoothScroll = (target, duration = 900) => {
-        const targetEl = document.querySelector(target);
-        if (!targetEl) return;
-
-        const start = window.scrollY;
-        const end = targetEl.getBoundingClientRect().top + start;
-        const startTime = performance.now();
-
-        const scrollStep = (currentTime) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = easeInOutQuad(progress);
-          window.scrollTo(0, start + (end - start) * eased);
-
-          if (progress < 1) {
-            requestAnimationFrame(scrollStep);
-          }
-        };
-
-        requestAnimationFrame(scrollStep);
-      };
-
-      window.addEventListener("load", () => {
-        requestAnimationFrame(revealHero);
-      });
-
-      document.querySelectorAll(".hero-btns a[href^='#']").forEach((link) => {
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
-          smoothScroll(link.getAttribute("href"));
-        });
-      });
-
-      document
-        .querySelectorAll(
-          ".about-story, .timeline-item, .skills-intro, .stack-item, #skills .tech-item, .education-intro, .education-card, .education-content, .projects-intro, .project, .contact-intro, .contact-content, .footer-content, .footer-meta, #contact h2, #contact > p",
-        )
-        .forEach((item) => {
-          observer.observe(item);
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
