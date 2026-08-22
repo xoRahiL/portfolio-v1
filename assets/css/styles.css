@@ -100,7 +100,7 @@ img {
 main {
   max-width: var(--container-width);
   margin: 0 auto;
-  /* padding: 1rem 1rem; */
+  padding: 0 1.5rem;
 }
 
 section {
@@ -292,7 +292,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 2rem;
+  padding: 2rem 0;
   overflow: hidden;
 }
 .hero-title {
@@ -319,7 +319,7 @@ nav {
 }
 #hero-name {
   font-family: "Teko", sans-serif;
-  font-size: clamp(10rem, 28vw, 22rem);
+  font-size: clamp(10rem, 28vw, 17rem);
   line-height: 0.85;
   /* letter-spacing: -0.02em; */
   font-weight: 700;
@@ -466,9 +466,6 @@ nav {
   }
   .hero-content {
     margin-top: 2rem;
-  }
-  #hero-name {
-    font-size: clamp(6rem, 22vw, 9rem);
   }
   .hero-subtitle {
     font-size: 1.15rem;
@@ -1092,6 +1089,16 @@ nav {
   transition: width 0.25s ease;
 }
 
+.demo-note {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .project-links a:hover::after {
   width: 100%;
 }
@@ -1413,12 +1420,13 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
   #hero {
-    min-height: auto;
-    padding: 6rem 1rem;
+    min-height: calc(100vh - 95px);
+    min-height: calc(100dvh - 95px);
+    padding: 2rem 0;
   }
 
   #hero-name {
-    font-size: clamp(7rem, 28vw, 10rem);
+    font-size: clamp(5.2rem, 34vw - 1.6rem, 7.8rem);
   }
 
   .hero-build-with {
