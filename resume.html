@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahil Khan | Resume</title>
+    <meta
+      name="description"
+      content="Resume of Rahil Khan — Python/Django developer from Ahmedabad, India, building toward the MERN stack."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/resume.css" />
+  </head>
+  <body>
+    <!-- Toolbar: not printed, holds theme toggle + download/print button -->
+    <div class="resume-toolbar no-print">
+      <a href="index.html" class="toolbar-back">← Back to Portfolio</a>
+      <div class="toolbar-actions">
+        <button
+          id="themeToggle"
+          class="toolbar-btn"
+          aria-label="Toggle light/dark theme"
+        >
+          <span id="themeIcon" aria-hidden="true">☀️</span>
+          <span id="themeLabel">Light mode</span>
+        </button>
+        <button id="downloadBtn" class="toolbar-btn primary">
+          Download PDF
+        </button>
+      </div>
+    </div>
+
+    <main class="resume-page">
+      <!-- ============ HEADER ============ -->
+      <header class="resume-header">
+        <div class="resume-heading">
+          <h1>Rahil Khan</h1>
+          <p class="resume-title">Python & Django Developer</p>
+        </div>
+
+        <ul class="resume-contact">
+          <li><a href="mailto:xorahil@gmail.com">xorahil@gmail.com</a></li>
+          <li><a href="tel:+919510580678">+91 95105 80678</a></li>
+          <li>Ahmedabad, Gujarat, India</li>
+          <li><a href="https://github.com/xoRahiL" target="_blank" rel="noopener">github.com/xoRahiL</a></li>
+          <li><a href="https://xorahil.github.io/portfolio-v1/" target="_blank" rel="noopener">Portfolio ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/rahil-khan-xo21/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </header>
+
+      <!-- ============ SUMMARY ============ -->
+      <section class="resume-section">
+        <h2>Summary</h2>
+        <p>
+          Python and Django developer with a year of hands-on experience
+          turning manual workflows into automated systems. At Northeast
+          PSC, rebuilt a content-writing role around AI-directed Python
+          automation — the output includes a published math MCQ book that
+          sold 3,000+ copies in its first 15 days, plus study material and
+          presentations at scale, all held to a zero-error standard since
+          the work reaches real students. Separately, designed and
+          deployed SparkyEvents, a full-stack Django application, taking
+          it independently from a college assignment to a live production
+          app. Currently expanding into React to round out the frontend
+          side.
+        </p>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section class="resume-section">
+        <h2>Experience</h2>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Content Developer — Learning Materials</h3>
+            <span class="entry-date">Nov 2024 – Present</span>
+          </div>
+          <p class="entry-org">Northeast PSC (Remote) · Python, Content Automation, AI-Assisted Workflows</p>
+          <ul class="entry-bullets">
+            <li>Self-driven automation: started as a content-writing role; introduced Python automation (multiple script variations, AI-directed and self-reviewed) to handle repetitive parsing/formatting work — cut multi-day content tasks down to hours.</li>
+            <li>Published author: wrote and published a 2,000+ question math MCQ book (equations included), combining Python automation with thorough manual review for zero errors — sold 3,000+ copies in its first 15 days.</li>
+            <li>Also delivered: 1,000+ formatted study documents and hundreds of multi-hundred-slide PPTs, all held to the same zero-error standard.</li>
+            <li>Ownership: handle the pipeline end-to-end — prompt design for AI-generated scripts, output validation, and formatting logic across every source type.</li>
+          </ul>
+        </div>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Python Developer Intern</h3>
+            <span class="entry-date">Nov 2023 – May 2024</span>
+          </div>
+          <p class="entry-org">Sparks To Ideas · Python, Django, SQL, HTML/CSS/JS, Bootstrap</p>
+          <ul class="entry-bullets">
+            <li>Foundation-building: learned Django's request/response cycle and ORM hands-on, plus Git workflow — first real exposure to both, no prior framework experience.</li>
+            <li>Self-taught debugging: worked through real errors independently, with no senior to lean on for every issue — this is where actual problem-solving skill came from, not tutorials.</li>
+            <li>Core logic: implemented auth, role-based access control, and multi-user dashboards, building the full-stack app end-to-end — later extended independently into a production-deployed app (see SparkyEvents).</li>
+          </ul>
+        </div>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Web Development Instructor</h3>
+            <span class="entry-date">Jun 2024 – Oct 2024</span>
+          </div>
+          <p class="entry-org">Raj Computers Academy · HTML, CSS, JavaScript</p>
+          <ul class="entry-bullets">
+            <li>Taught HTML, CSS, JavaScript and web design fundamentals to 30+ students, with hands-on projects assigned alongside theory.</li>
+            <li>One-on-one mentoring for doubt-solving; built AI-assisted learning roadmaps to speed up individual progress.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="resume-section">
+        <h2>Projects</h2>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>SparkyEvents — Two-Sided Event Marketplace</h3>
+            <div class="entry-links">
+              <a href="https://sparkyevents.onrender.com" target="_blank" rel="noopener" class="entry-link">Live ↗</a>
+              <a href="https://github.com/xoRahiL/SparkyEvents" target="_blank" rel="noopener" class="entry-link">GitHub ↗</a>
+            </div>
+          </div>
+          <p class="entry-org">Django, PostgreSQL, JWT, Bootstrap</p>
+          <ul class="entry-bullets">
+            <li>Architecture: two-sided marketplace (organizers ↔ gig workers), role-based dashboards and permissions per side.</li>
+            <li>Concurrency control: row-level locking + atomic transactions — prevents double-booking under simultaneous requests.</li>
+            <li>Auth & security: JWT role-based access, object-level permission checks, OTP verification with expiry + rate-limiting.</li>
+            <li>Query performance: connection pooling, select_related; DB-level aggregation for earnings/spend.</li>
+            <li>Infra: Brevo API for email with retry logic; deployed on Render with secrets management.</li>
+          </ul>
+        </div>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Netflix Clone — Streaming UI</h3>
+            <div class="entry-links">
+              <!-- TODO: add your live Vercel URL here -->
+              <span class="entry-link muted">Live on Vercel</span>
+              <!-- TODO: confirm/push this repo — github.com/xoRahiL/netflix-clone is not resolving publicly yet -->
+              <a href="https://github.com/xoRahiL/netflix-clone" target="_blank" rel="noopener" class="entry-link">GitHub ↗</a>
+            </div>
+          </div>
+          <p class="entry-org">React, React Router, TMDB API</p>
+          <ul class="entry-bullets">
+            <li>React 19 build: fully responsive UI with Hooks and React Router v7, pulling dynamic content rows from the TMDB REST API through a custom abstraction layer with Bearer token auth.</li>
+            <li>Data handling: deduplication logic so no movie repeats across sections, proper loading/error states, and API keys kept in environment variables instead of hardcoded.</li>
+          </ul>
+        </div>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Grocery Mart — E-Commerce App</h3>
+            <div class="entry-links">
+              <!-- TODO: add a link here if this project is on GitHub -->
+              <span class="entry-link muted">Repo link TBD</span>
+            </div>
+          </div>
+          <p class="entry-org">Django, HTML/CSS</p>
+          <ul class="entry-bullets">
+            <li>First independent full-stack project — Django backend with product listings, category filtering, cart flow.</li>
+          </ul>
+        </div>
+
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Personal Portfolio</h3>
+            <div class="entry-links">
+              <a href="https://xorahil.github.io/portfolio-v1/" target="_blank" rel="noopener" class="entry-link">Live ↗</a>
+              <a href="https://github.com/xoRahiL/portfolio-v1" target="_blank" rel="noopener" class="entry-link">GitHub ↗</a>
+            </div>
+          </div>
+          <p class="entry-org">HTML, CSS, JavaScript</p>
+          <ul class="entry-bullets">
+            <li>Minimalist personal site with a focus on typography, smooth interactions, and clean architecture.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="resume-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages & Querying</h3>
+            <p>Python, SQL, JavaScript</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend & Databases</h3>
+            <p>Django, SQL Databases</p>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <p>React.js, HTML, CSS, Bootstrap, JavaScript</p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools & Practices</h3>
+            <p>Git, Render (Cloud Deployment), REST API Integration (TMDB, Brevo), Python Automation Scripting, AI Prompt Engineering</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section class="resume-section">
+        <h2>Education & Certifications</h2>
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <span class="entry-date">Graduated May 2024</span>
+          </div>
+          <p class="entry-org">Lok Manya College, Gujarat University · CGPA: 7.11/10</p>
+        </div>
+        <div class="resume-entry">
+          <div class="entry-top">
+            <h3>Certified Python Developer</h3>
+          </div>
+          <p class="entry-org">Sparks To Ideas</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/resume.js"></script>
+  </body>
+</html>
