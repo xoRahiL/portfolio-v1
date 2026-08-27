@@ -200,7 +200,6 @@ ul {
 .resume-section > p {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  max-width: 65ch;
 }
 
 .resume-entry {
